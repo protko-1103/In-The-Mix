@@ -11,7 +11,9 @@
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <!-- Logo -->
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand d-none d-lg-block" href="#">Navbar</a>
+
+          <!-- hamburger, appears when collapsing -->
           <button 
             class="navbar-toggler" 
             type="button" 
@@ -39,7 +41,7 @@
                 <a class="nav-link" href="#">Events</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Register</a>
+                <a class="nav-link" id="register-btn" href="#">Register</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Sign In</a>
@@ -50,13 +52,19 @@
     </nav>
 
     <!-- hero content -->
-     <section class="bg-dark text-light p-5 text-center">
+     <section class="bg-dark text-light p-5 text-center text-sm-start">
       <div class="container">
-        <div class="d-sm-flex">
+        <div class="d-sm-flex align-items-center justify-content-between">
           <div>
-            <h1>There is always a community for you</h1>
+            <!-- change span color to brand color -->
+            <h1>There is always a <span class="text-warning">community</span> for you</h1>
+            <p class="lead my-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            </p>
+            <button class="btn btn-primary btn-lg">Join the Mix</button>
+            <button class="btn btn-secondary btn-lg">Upload an Event</button>
           </div>
-          <img class="img-fluid w-50" src="#" alt="">
+          <img class="img-fluid w-50 d-none d-sm-block" src="#" alt="">
         </div>
       </div>
      </section>
