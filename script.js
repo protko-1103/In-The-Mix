@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { //ensures the register button is clickable
   const registerLink = document.getElementById('register-btn');
 
   registerLink.addEventListener('click', (event) => {
@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+
+
+document.addEventListener('DOMContentLoaded', () => { //same purpose, but for the events tab
   const registerLink = document.getElementById('events-btn');
 
   registerLink.addEventListener('click', (event) => {
