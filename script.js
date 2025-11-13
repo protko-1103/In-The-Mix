@@ -17,3 +17,13 @@ document.addEventListener('DOMContentLoaded', () => { //same purpose, but for th
     console.log("Events clicked!"); // test
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => { //same purpose, but for the events tab
+  const registerLink = document.getElementById('home-btn');
+
+  registerLink.addEventListener('click', (event) => {
+    event.preventDefault(); // stops the link from refreshing the page
+    console.log("Home clicked!"); // test
+  });
+});
