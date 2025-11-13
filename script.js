@@ -31,6 +31,15 @@ document.addEventListener('DOMContentLoaded', () => { //same purpose, but for th
 
   registerLink.addEventListener('click', (event) => {
     event.preventDefault(); // stops the link from refreshing the page
-    console.log("learnmore clicked!"); // test
+    console.log("Learn More clicked!"); // test
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => { //same purpose, but for the events tab
+  const registerLink = document.getElementById('uploadevent-btn');
+
+  registerLink.addEventListener('click', (event) => {
+    event.preventDefault(); // stops the link from refreshing the page
+    console.log("Upload Event clicked!"); // test
   });
 });
