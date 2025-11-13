@@ -7,13 +7,30 @@ document.addEventListener('DOMContentLoaded', () => { //ensures the register but
   });
 });
 
-
-
 document.addEventListener('DOMContentLoaded', () => { //same purpose, but for the events tab
   const registerLink = document.getElementById('events-btn');
 
   registerLink.addEventListener('click', (event) => {
     event.preventDefault(); // stops the link from refreshing the page
     console.log("Events clicked!"); // test
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => { //same purpose, but for the events tab
+  const registerLink = document.getElementById('home-btn');
+
+  registerLink.addEventListener('click', (event) => {
+    event.preventDefault(); // stops the link from refreshing the page
+    console.log("Home clicked!"); // test
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => { //same purpose, but for the events tab
+  const registerLink = document.getElementById('learnmore-btn');
+
+  registerLink.addEventListener('click', (event) => {
+    event.preventDefault(); // stops the link from refreshing the page
+    console.log("learnmore clicked!"); // test
   });
 });
