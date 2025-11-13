@@ -1,3 +1,46 @@
+:root{
+    --primary-color: #583593;
+    --secondary-color: #9c7fd5;
+    --teal: #c5fbf0;
+    --white: #fff;
+    --black: #000;
+    --gray: #d3d3d3;
+}
+
+.btn-primary {
+    color: var(--white);
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+}
+
+
+/* navbar */
+nav form .btn{
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+nav form .btn:hover{
+    border: none;
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+#signin-btn{
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 10px;
+}
+
+#signin-btn:hover{
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Testimonials */
 .testimonials .card {
     border: none;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -10,5 +53,10 @@
 .testimonials img {
     width: 50px;
     height: 50px;
+}
+
+/* Footer */
+.footer{
+    background: var(--secondary-color);
 }
 
