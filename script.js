@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', () => { //ensures the register but
   });
 });
 
-
-
 document.addEventListener('DOMContentLoaded', () => { //same purpose, but for the events tab
   const registerLink = document.getElementById('events-btn');
 
