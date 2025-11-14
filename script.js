@@ -1,45 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => { //ensures the register button is clickable
-  const registerLink = document.getElementById('register-btn');
+document.addEventListener("DOMContentLoaded", () => {
+  const registerBtn = document.getElementById("register-btn");
+  if (registerBtn) {
+    registerBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.location.href = "register.html";
+    });
+  }
 
-  registerLink.addEventListener('click', (event) => {
-    event.preventDefault(); // stops the link from refreshing the page
-    console.log("Register clicked!"); // test
-  });
-});
+  const eventsBtn = document.getElementById("events-btn");
+  if (eventsBtn) {
+    eventsBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.location.href = "events.html";
+    });
+  }
 
-document.addEventListener('DOMContentLoaded', () => { //same purpose, but for the events tab
-  const registerLink = document.getElementById('events-btn');
+  const homeBtn = document.getElementById("home-btn");
+  if (homeBtn) {
+    homeBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.location.href = "index.html";
+    });
+  }
 
-  registerLink.addEventListener('click', (event) => {
-    event.preventDefault(); // stops the link from refreshing the page
-    console.log("Events clicked!"); // test
-  });
-});
+  const learnMoreBtn = document.getElementById("learnmore-btn");
+  if (learnMoreBtn) {
+    learnMoreBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.location.href = "sampleeventinfo.html";
+    });
+  }
 
-
-document.addEventListener('DOMContentLoaded', () => { //same purpose, but for the events tab
-  const registerLink = document.getElementById('home-btn');
-
-  registerLink.addEventListener('click', (event) => {
-    event.preventDefault(); // stops the link from refreshing the page
-    console.log("Home clicked!"); // test
-  });
-});
-
-document.addEventListener('DOMContentLoaded', () => { //same purpose, but for the events tab
-  const registerLink = document.getElementById('learnmore-btn');
-
-  registerLink.addEventListener('click', (event) => {
-    event.preventDefault(); // stops the link from refreshing the page
-    console.log("Learn More clicked!"); // test
-  });
-});
-
-document.addEventListener('DOMContentLoaded', () => { //same purpose, but for the events tab
-  const registerLink = document.getElementById('uploadevent-btn');
-
-  registerLink.addEventListener('click', (event) => {
-    event.preventDefault(); // stops the link from refreshing the page
-    console.log("Upload Event clicked!"); // test
-  });
+  const uploadEventBtn = document.getElementById("uploadevent-btn");
+  if (uploadEventBtn) {
+    uploadEventBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.location.href = "uploadevent.html";
+    });
+  }
 });
