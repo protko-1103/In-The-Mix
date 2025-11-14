@@ -60,3 +60,12 @@ nav form .btn:hover{
     background: var(--secondary-color);
 }
 
+.footer h5 {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.footer ul a{
+    color: var(--white);
+}
+
