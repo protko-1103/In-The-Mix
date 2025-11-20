@@ -39,3 +39,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// MODAL script
+  const steps = document.querySelectorAll('.modal-step');
+
+  // Handle Next buttons
+  document.querySelectorAll('.next').forEach(btn => {
+    btn.addEventListener('click', () => {
+      let nextStep = btn.dataset.next;
+      
+      steps.forEach(step => step.classList.add('d-none'));
+      document.getElementById(nextStep).classList.remove('d-none');
+    });
+  });
+
+  // Handle Back buttons
+  document.querySelectorAll('.back').forEach(btn => {
+    btn.addEventListener('click', () => {
+      let backStep = btn.dataset.back;
+
+      steps.forEach(step => step.classList.add('d-none'));
+      document.getElementById(backStep).classList.remove('d-none');
+    });
+  });
+
+  // Handle Email Form Submit
+  document.getElementById('emailSignupForm').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    // Validate, send to API, etc. here. We prob don't have time for this.
+
+    window.location.href = "#"; // <-- Your logged-in page
+  });

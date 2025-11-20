@@ -67,7 +67,7 @@
             </p>
 
             <!-- modal trigger -->
-            <button class="btn btn-primary btn-lg" data-bs-target="#reg-modal" data-bs-toggle="modal">Join the Mix</button>
+            <button class="btn btn-primary btn-lg" data-bs-target="#signupModal" data-bs-toggle="modal">Join the Mix</button>
             <button class="btn btn-secondary btn-lg"id="uploadevent-btn">Upload an Event</button>
             
           </div>
@@ -77,24 +77,107 @@
      </section>
 
      <!-- Register (new user): modal itself -->
-      <!-- to link the modal to any button, type this on the element: data-bs-target="#reg-modal" -->
-    <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modal-title">Sign up</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <!-- to link the modal to any button, type this on the element: data-bs-target="#signupModal" -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-3">
+
+          <!-- STEP 1: Account Type -->
+          <div class="modal-step" id="step1">
+            <h4 class="mb-3 text-center">Choose Account Type</h4>
+            <p class="text-center">Are you an event goer or event organizer?</p>
+
+            <div class="container text center">
+              <div class="row justify-content-start">
+                <div class="col-md-6" style="height: 100px;">
+                  <button class="btn btn-outline-primary w-100 h-100 mb-2 next" data-next="step2" data-account="personal">
+                    Personal Account
+                  </button>
+                </div>
+
+                <div class="col-md-6" style="height: 100px;">
+                  <button class="btn btn-primary w-100 h-100 next" data-next="step2" data-account="organization">
+                    Organization Account
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-center pt-3">
+              Both can view, attend, and review events. </br>
+              <span class="text-uppercase">only</span> organizers can upload events
+            </p>
           </div>
 
-          <div class="modal-body">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione laboriosam sit dolore iure exercitationem veniam, reiciendis sint, voluptatibus voluptatum, obcaecati fugit. Dignissimos quam porro ex sit libero corrupti autem nostrum.</p>
-            <label for="modal-email" class="form-label">Your email:</label>
-            <input type="email" class="form-control" id="modal-email" placeholder="e.g. mario@example.com">
+          <!-- STEP 2: Sign Up Method -->
+          <div class="modal-step d-none" id="step2">
+            <!-- google sign-up -->
+            <h4 class="mb-3 text-center">Sign Up With</h4>
+            <button class="btn w-100 mb-2" id="googleSignUp" disabled>
+              Continue with Google
+            </button>
+            <!-- apple sign-up -->
+            <button class="btn w-100 mb-2" id="appleSignUp" disabled>
+              Continue with Apple
+            </button>
+            <!-- Facebook sign-up -->
+            <button class="btn w-100 mb-2" id="fbSignUp" disabled>
+              Continue with Facebook
+            </button>
+
+
+            <!-- Email sign-up -->
+            <button class="btn btn-outline-primary w-100 next" data-next="step3">
+              Continue with Email
+            </button>
+            <button class="btn btn-link mt-3 back" data-back="step1">← Back</button>
           </div>
 
-          <div class="modal-footer">
-            <button class="btn btn-primary">Submit</button>
+          <!-- STEP 3: Email/Password Form -->
+          <div class="modal-step d-none" id="step3">
+            <h4 class="mb-3 text-center">Finish Signing Up</h4>
+
+            <form id="emailSignupForm">
+              <div class="mb-3">
+                <label class="form-label">Your Name</label>
+                <input type="text" class="form-control" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Business/Organization name</label>
+                <input type="text" class="form-control" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" required>
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">
+                  <i class="bi bi-geo-alt"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Orlando, FL" aria-label="Location" aria-describedby="basic-addon1">
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">
+                Create Account
+              </button>
+            </form>
+
+            <button class="btn btn-link mt-3 back" data-back="step2">← Back</button>
           </div>
+
         </div>
       </div>
     </div>
