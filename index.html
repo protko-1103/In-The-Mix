@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg bg-light py-3">
         <div class="container-fluid">
           <!-- Logo -->
-          <a class="navbar-brand d-none d-lg-block" href="#"><img src="images/ITM-Logo-Final-Solid.svg" alt="In The Mix Logo" style="height: 55px; width: auto;"></a>
+          <a class="navbar-brand d-none d-lg-block" href="index.html"><img src="images/ITM-Logo-Final-Solid.svg" alt="In The Mix Logo" style="height: 55px; width: auto;"></a>
 
           <!-- hamburger, appears when collapsing -->
           <button 
@@ -65,7 +65,9 @@
             <p class="lead my-4">
               Find cool events nearby, tell others what you think, and meet people who share your passions. Everyone’s welcome to be part of the fun.
             </p>
-            <button class="btn btn-primary btn-lg">Join the Mix</button>
+
+            <!-- modal trigger -->
+            <button class="btn btn-primary btn-lg" data-bs-target="#reg-modal" data-bs-toggle="modal">Join the Mix</button>
             <button class="btn btn-secondary btn-lg"id="uploadevent-btn">Upload an Event</button>
             
           </div>
@@ -73,6 +75,32 @@
         </div>
       </div>
      </section>
+
+     <!-- Register (new user): modal itself -->
+      <!-- to link the modal to any button, type this on the element: data-bs-target="#reg-modal" -->
+    <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-title">Sign up</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione laboriosam sit dolore iure exercitationem veniam, reiciendis sint, voluptatibus voluptatum, obcaecati fugit. Dignissimos quam porro ex sit libero corrupti autem nostrum.</p>
+            <label for="modal-email" class="form-label">Your email:</label>
+            <input type="email" class="form-control" id="modal-email" placeholder="e.g. mario@example.com">
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
 
      <!-- boxes of events-->
      <section class="p-5">
@@ -86,7 +114,9 @@
                 <h6 class="card-subtitle mb-2 text-muted">Date</h6>
                 <h5 class="card-title">Event Name</h5>
                 <p class="card-text">Event author</p>
-                <a href="#" id="learnmore-btn" class="btn btn-primary">Learn more</a>
+
+                <!-- this link leads to the 'sampleeventinfo.html' -->
+                <a href="sampleeventinfo.html" id="learnmore-btn" class="btn btn-primary">Learn more</a>
               </div>
             </div>
           </div>
