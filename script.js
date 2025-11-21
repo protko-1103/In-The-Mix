@@ -71,3 +71,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.location.href = "#"; // <-- Your logged-in page
   });
+
+
+  //Hard coding a user for the demo, content like name/event/user can be changed lol I just googled random name generator.
+  function createHardcodedAccount(){
+  const user = {
+    name: "Evan Mitchell",
+    organization: "Farmer's Market",
+    username: "e_mitchell",
+    email: "demo@gmail.com",
+    role: "organizer",
+    location: "Orlando, FL",
+  };
+
+
+  //figure out how to put this into local storage, google how to hard code a user for a demo in js
+  //I think we need this in HTML - <button onclick="createHardcodedAccount()">Create Account</button>
+  //Make sure these appear in the fields on the sign up flow, google how to do this.
+}
