@@ -89,3 +89,17 @@ document.addEventListener("DOMContentLoaded", () => {
   //I think we need this in HTML - <button onclick="createHardcodedAccount()">Create Account</button>
   //Make sure these appear in the fields on the sign up flow, google how to do this.
 }
+
+
+// Script for the uploadevent.html page
+// Upload Image button
+$("#selectFile").bind('change', function(){
+  var filename = $("#selectFile").val();
+  if(/^*$/.test(filename)){
+    $("#blankFile").text("No file chosen...");
+    $(".success").hide();
+  } else {
+    $("#blankFile").text(filename.replace("c:\\fakepath\\", ""));
+    $(".success").show();
+  }
+})

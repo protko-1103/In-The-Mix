@@ -55,6 +55,69 @@ nav form .btn:hover{
     height: 50px;
 }
 
+/* uploadevents.html: file upload box */
+/* fix the display of the button */
+.file-wrapper {
+    width: 100%;
+    margin: auto;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+}
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+}
+.upload-file {
+    border: 2px dashed var(--gray);
+    color: var(--secondary-color);
+    width: 400px;
+    height: 250px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.upload-btn-wrapper input[type=file] {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    min-height: 300px;
+}
+.success {
+    display: none; 
+}
+
+.success i {
+    font-size: 22px;
+    margin-left: 6px;
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+
+.font-50 {
+    font-size: 50px;
+}
+
+.d-block {
+    display: none;
+}
+
+.btn .upload-file {
+    font-size: 13px;
+}
+
+.upload-btn {
+    display: block;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
 /* Footer */
 .footer{
     background: var(--secondary-color);

@@ -15,11 +15,11 @@
      <section class="container p-5">
       <div class="row">
         <!-- Upload Form -->
-        <div class="col-md-8 themed-grid-col">
+        <div class="col-md-8">
 
           <!-- Event Name -->
           <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label h3">Event Name</label>
+            <label for="formGroupExampleInput" class="form-label">Event Name</label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Give your event a name">
           </div>
 
@@ -35,23 +35,40 @@
             <label for="formGroupExampleInput" class="form-label">You can add 5 topics</label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
           </div>
+
+            <!-- Search location -->
+          <div class="mb-3">
+            <label for="exampleDataList" class="form-label">Location</label>
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+            <datalist id="datalistOptions">
+              <option value="San Francisco">
+              <option value="New York">
+              <option value="Seattle">
+              <option value="Los Angeles">
+              <option value="Chicago">
+            </datalist>
+          </div>
         </div>
 
         <!-- Right Contents -->
-        <div class="col 6 col-md-4 themed-grid-col">
-          <img src="" alt="map of the event location">
+        <div class="col-6 col-md-4">
+          <div class="file-wrapper">
+            <button class="btn upload-file font-weight-500">
+              <span class="upload-btn">
+                <i class="bi bi-cloud-check-fill d-block font-50 pb-2">
+                  Browse folders here
+                </i>
+              </span>
+              <span class = "upload-select-button" id="blankFile">Supports JPG, JPG2000 and PNG</span>
+              <span class="success">
+                <i class="bi bi-check-circle text-success"></i>
+              </span>
+            </button>
+            <input type="file" name="selectFile" id="selectFile">
+          </div>
         </div>
 
-        <!-- Search location -->
-         <label for="exampleDataList" class="form-label">Datalist example</label>
-         <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-         <datalist id="datalistOptions">
-          <option value="San Francisco">
-          <option value="New York">
-          <option value="Seattle">
-          <option value="Los Angeles">
-          <option value="Chicago">
-        </datalist>
+        
         
       </div>
      </section>
