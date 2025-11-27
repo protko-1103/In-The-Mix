@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Script for the uploadevent.html page
+
 // Upload Image button
 $("#selectFile").bind('change', function(){
   var filename = $("#selectFile").val();
@@ -103,3 +104,28 @@ $("#selectFile").bind('change', function(){
     $(".success").show();
   }
 })
+
+
+flatpickr("#eventCalendar", {
+    dateFormat: "F j, Y",
+    minDate: "today",
+    altInput: true,
+    altFormat: "F j, Y",
+});
+
+flatpickr("#eventDateTime", {
+    enableTime: true,
+    dateFormat: "F j, Y h:i K",
+    altInput: true,
+    altFormat: "F j, Y h:i K",
+    minDate: "today"
+});
+
+// Toggle reveal sections
+document.querySelectorAll(".toggle").forEach(toggler => {
+    toggler.addEventListener("change", function () {
+        const box = document.querySelector(this.dataset.target);
+        box.classList.toggle("show", this.checked);
+    });
+});
+

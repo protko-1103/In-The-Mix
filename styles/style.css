@@ -118,6 +118,72 @@ nav form .btn:hover{
     color: var(--primary-color);
 }
 
+/* Location box */
+.location-box {
+    background: #dbe2ec;
+    padding: 1.2rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.location-tabs {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: .8rem;
+}
+
+.location-tabs .tab {
+    cursor: pointer;
+    padding: .3rem .5rem;
+    border-radius: 10px;
+    transition: .2s;
+    font-weight: 500;
+}
+
+.location-tabs .tab:hover,
+.location-tabs .tab.active {
+    background: #fff;
+}
+
+.location-divider {
+    height: 1px;
+    background: #b7beca;
+    margin: .8rem 0 1rem;
+}
+
+/* Calendar box */
+.calendar-box {
+    border: 2px solid #52637f;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.flatpickr-calendar {
+    border-radius: 10px !important;
+}
+
+/* Toggle rows */
+.settings-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .4rem 0;
+    border-bottom: 1px solid #d3d7de;
+}
+
+.settings-content {
+    margin: .8rem 0 1.2rem;
+    padding-left: .5rem;
+    display: none;
+}
+
+.settings-content.show {
+    display: block;
+}
+
+
+
 /* Footer */
 .footer{
     background: var(--secondary-color);

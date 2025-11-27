@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>In the Mix</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+
+
     <link rel="stylesheet" href="styles/style.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -19,41 +23,120 @@
 
           <!-- Event Name -->
           <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label">Event Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Give your event a name">
+            <label for="eventNameInput" class="form-label">Event Name</label>
+            <input type="text" class="form-control" id="eventNameInput" placeholder="Give your event a name">
           </div>
 
           <!-- Event Description -->
           <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label">Description (required)</label>
+            <label for="descriptionTextarea1" class="form-label">Description (required)</label>
             <div id="passwordhelpBlock" class="form-text"></div>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>          
+            <textarea class="form-control" id="descriptionTextarea1" rows="3"></textarea>          
           </div>
 
           <!-- Tags -->
           <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label">You can add 5 topics</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+            <label for="tagsInput" class="form-label">You can add 5 topics</label>
+            <input type="text" class="form-control" id="tagsInput" placeholder="">
           </div>
 
-            <!-- Search location -->
-          <div class="mb-3">
-            <label for="exampleDataList" class="form-label">Location</label>
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-            <datalist id="datalistOptions">
-              <option value="San Francisco">
-              <option value="New York">
-              <option value="Seattle">
-              <option value="Los Angeles">
-              <option value="Chicago">
-            </datalist>
+          <!-- location -->
+          <label class="form-label">Location</label>
+          <div class="location-box">
+
+            <div class="location-tabs">
+              <div class="tab active" data-type="inperson">
+                <i class="bi bi-geo-alt"></i><br>
+                In person
+              </div>
+              <div class="tab" data-type="online">
+                <i class="bi bi-laptop"></i><br>
+                In person
+              </div>
+              <div class="tab" data-type="hybrid">
+                <i class="bi bi-geo"></i><br>
+                In person
+              </div>
+            </div>
+
+            <div class="location-divider"></div>
+
+            <div>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search location">
+              </div>
+            </div>
+
           </div>
+
+          <!-- Calendar -->
+          <label class="form-label mt-3">Calendar</label>
+          <div class="calendar-box mb-3">
+            <input type="text" id="eventCalendar" class="form-control" placeholder="Select date">
+          </div>
+
+          <!-- Date & Time -->
+           <label class="form-label mt-3">Date & Time</label>
+           <input type="text" id="eventDateTime" class="form-control mb-3">
+
+          <!-- Duration -->
+           <label class="form-label">Duration</label>
+           <input type="text" id="eventDuration" class="form-control mb-3">
+
+          <!-- Event Settings -->
+          <div class="mt-4">
+            <h5>Event Settings</h5>
+
+            <!-- Communication method -->
+            <div class="settings-row">
+              <span>Communication method</span>
+              <div class="form-check form-switch">
+                <input type="checkbox" data-target="#communicationBox" class="form-check-input toggle">
+              </div>
+
+              <div id="repeatBox" class="settings-content">
+                <label class="form-label">Repeat every...</label>
+                <select class="form-select">
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                    <option>Yearly</option>
+                </select>
+              </div>
+
+              <!-- Attendee limit -->
+              <div class="settings-row">
+                  <span>Attendee limit</span>
+                  <div class="form-check form-switch">
+                      <input class="form-check-input toggle" data-target="#limitBox" type="checkbox">
+                  </div>
+              </div>
+              <div id="limitBox" class="settings-content">
+                  <label class="form-label">Max attendees</label>
+                  <input type="number" class="form-control" placeholder="Number">
+              </div>
+
+              <!-- Event fee -->
+              <div class="settings-row">
+                  <span>Event fee</span>
+                  <div class="form-check form-switch">
+                      <input class="form-check-input toggle" data-target="#feeBox" type="checkbox">
+                  </div>
+              </div>
+              <div id="feeBox" class="settings-content">
+                  <label class="form-label">Price</label>
+                  <input type="number" class="form-control" placeholder="$">
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <!-- Right Contents -->
-        <div class="col-6 col-md-4">
+        <div class="col-6 col-md-4 ">
           <div class="file-wrapper">
-            <button class="btn upload-file font-weight-500">
+            <div class="upload-btn-wrapper">
+              <button class="btn upload-file font-weight-500">
               <span class="upload-btn">
                 <i class="bi bi-cloud-check-fill d-block font-50 pb-2">
                   Browse folders here
@@ -65,14 +148,34 @@
               </span>
             </button>
             <input type="file" name="selectFile" id="selectFile">
+            </div>
           </div>
         </div>
-
-        
-        
+                
       </div>
      </section>
-  
+
+     <section class="container p-5">
+      </section>
+
+      <section class="container p-5">
+        <!-- Action Bar -->
+        <div class="d-flex justify-content-between align-items-center border-top pt-4 mt-4">
+          <!-- cancel button -->
+          <button type="button" class="btn btn-outline-secondary">Cancel</button>
+
+          <!-- Right buttons -->
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-outline-primary">Save as Draft</button>
+            <button type="button" class="btn btn-outline-info">Preview</button>
+            <button type="submit" class="btn btn-outline-primary">Publish</button>
+          </div>
+      </div>        
+      </section>
+
+  <!-- Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
   <script src="script.js"></script>
   </body>
 </html>
