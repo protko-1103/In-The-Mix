@@ -93,39 +93,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Script for the uploadevent.html page
 
-// Upload Image button
-$("#selectFile").bind('change', function(){
-  var filename = $("#selectFile").val();
-  if(/^*$/.test(filename)){
-    $("#blankFile").text("No file chosen...");
-    $(".success").hide();
-  } else {
-    $("#blankFile").text(filename.replace("c:\\fakepath\\", ""));
-    $(".success").show();
-  }
-})
+// Calendar
+// Main event date & time
 
+// Duration picker (minutes)
 
-flatpickr("#eventCalendar", {
-    dateFormat: "F j, Y",
-    minDate: "today",
-    altInput: true,
-    altFormat: "F j, Y",
-});
+// End time auto-calculated
 
-flatpickr("#eventDateTime", {
-    enableTime: true,
-    dateFormat: "F j, Y h:i K",
-    altInput: true,
-    altFormat: "F j, Y h:i K",
-    minDate: "today"
-});
 
 // Toggle reveal sections
-document.querySelectorAll(".toggle").forEach(toggler => {
-    toggler.addEventListener("change", function () {
-        const box = document.querySelector(this.dataset.target);
-        box.classList.toggle("show", this.checked);
-    });
-});
+
+// Upload Image button
+const fileInput = document.querySelector("#selectFile");
+const fileLabel = document.querySelector("#blankFile");
+const successIcon = document.querySelector(".success");
+
+if (fileInput) {
+  fileInput.addEventListener("change", function() {
+    const file = this.files[0];
+
+    if(!file) {
+      fileLabel.textContent = "No file chosen...";
+      successIcon.computedStyleMap.display = "none";
+      return;
+    }
+
+    //Set filename in UI
+    fileLabel.textContent = file.name;
+    successIcon.style.display = "inline-block";
+  });
+}
+
+
 

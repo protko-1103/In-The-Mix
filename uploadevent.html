@@ -17,6 +17,9 @@
 
   <body>
      <section class="container p-5">
+
+      <h1>Add Event</h1>
+
       <div class="row">
         <!-- Upload Form -->
         <div class="col-md-8">
@@ -40,97 +43,110 @@
             <input type="text" class="form-control" id="tagsInput" placeholder="">
           </div>
 
-          <!-- location -->
-          <label class="form-label">Location</label>
-          <div class="location-box">
+            <!-- LOCATION -->
+            <label class="form-label">Location</label>
+            <div class="location-box">
+                <div class="location-tabs">
+                    <div class="tab active" data-type="inperson">
+                        <i class="bi bi-geo-alt"></i><br>In person
+                    </div>
+                    <div class="tab" data-type="online">
+                        <i class="bi bi-laptop"></i><br>Online
+                    </div>
+                    <div class="tab" data-type="hybrid">
+                        <i class="bi bi-geo"></i><br>Hybrid
+                    </div>
+                </div>
 
-            <div class="location-tabs">
-              <div class="tab active" data-type="inperson">
-                <i class="bi bi-geo-alt"></i><br>
-                In person
-              </div>
-              <div class="tab" data-type="online">
-                <i class="bi bi-laptop"></i><br>
-                In person
-              </div>
-              <div class="tab" data-type="hybrid">
-                <i class="bi bi-geo"></i><br>
-                In person
-              </div>
+                <div class="location-divider"></div>
+
+                <div>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Search location">
+                    </div>
+                </div>
             </div>
 
-            <div class="location-divider"></div>
-
-            <div>
+            <!-- Select Date and Time -->
+            <div class="mb-3">
+              <label for="dateTimePicker" class="form-label">Select Date & Time</label>
+              
               <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-search"></i></span>
-                <input type="text" class="form-control" placeholder="Search location">
+                <input type="date" class="form-control">
+                <input type="time" class="form-control">
               </div>
+            </div>       
+
+            <!-- End Time -->
+            <label class="form-label mt-3">End Time</label>
+            <input class="form-control mb-3" type="time" id="endTimePicker" name="endTimePicker">
+
+            <!-- Duration div that appears when the user inputs an end time -->
+            <div class="mb-3" id="duration"></div>
+
+            <!-- EVENT SETTINGS -->
+            <div class="mt-4">
+                <h5>Event Settings</h5>
+
+                <!-- Communication method -->
+                <div class="settings-row">
+                    <span>Communication method</span>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input toggle" data-target="#communicationBox" type="checkbox">
+                    </div>
+                </div>
+
+                <div id="communicationBox" class="settings-content">
+                    <label class="form-label">How will attendees contact you?</label>
+                    <input type="text" class="form-control" placeholder="Email or phone">
+                </div>
+
+
+                <!-- Repeat event -->
+                <div class="settings-row">
+                    <span>Repeat event</span>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input toggle" data-target="#repeatBox" type="checkbox">
+                    </div>
+                </div>
+                <div id="repeatBox" class="settings-content">
+                    <label class="form-label">Repeat every...</label>
+                    <select class="form-select">
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                        <option>Yearly</option>
+                    </select>
+                </div>
+
+                <!-- Attendee limit -->
+                <div class="settings-row">
+                    <span>Attendee limit</span>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input toggle" data-target="#limitBox" type="checkbox">
+                    </div>
+                </div>
+                <div id="limitBox" class="settings-content">
+                    <label class="form-label">Max attendees</label>
+                    <input type="number" class="form-control" placeholder="Number">
+                </div>
+
+                <!-- Event fee -->
+                <div class="settings-row">
+                    <span>Event fee</span>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input toggle" data-target="#feeBox" type="checkbox">
+                    </div>
+                </div>
+                <div id="feeBox" class="settings-content">
+                    <label class="form-label">Price</label>
+                    <input type="number" class="form-control" placeholder="$">
+                </div>
+
             </div>
-
-          </div>
-
-          <!-- Calendar -->
-          <label class="form-label mt-3">Calendar</label>
-          <div class="calendar-box mb-3">
-            <input type="text" id="eventCalendar" class="form-control" placeholder="Select date">
-          </div>
-
-          <!-- Date & Time -->
-           <label class="form-label mt-3">Date & Time</label>
-           <input type="text" id="eventDateTime" class="form-control mb-3">
-
-          <!-- Duration -->
-           <label class="form-label">Duration</label>
-           <input type="text" id="eventDuration" class="form-control mb-3">
-
-          <!-- Event Settings -->
-          <div class="mt-4">
-            <h5>Event Settings</h5>
-
-            <!-- Communication method -->
-            <div class="settings-row">
-              <span>Communication method</span>
-              <div class="form-check form-switch">
-                <input type="checkbox" data-target="#communicationBox" class="form-check-input toggle">
-              </div>
-
-              <div id="repeatBox" class="settings-content">
-                <label class="form-label">Repeat every...</label>
-                <select class="form-select">
-                    <option>Weekly</option>
-                    <option>Monthly</option>
-                    <option>Yearly</option>
-                </select>
-              </div>
-
-              <!-- Attendee limit -->
-              <div class="settings-row">
-                  <span>Attendee limit</span>
-                  <div class="form-check form-switch">
-                      <input class="form-check-input toggle" data-target="#limitBox" type="checkbox">
-                  </div>
-              </div>
-              <div id="limitBox" class="settings-content">
-                  <label class="form-label">Max attendees</label>
-                  <input type="number" class="form-control" placeholder="Number">
-              </div>
-
-              <!-- Event fee -->
-              <div class="settings-row">
-                  <span>Event fee</span>
-                  <div class="form-check form-switch">
-                      <input class="form-check-input toggle" data-target="#feeBox" type="checkbox">
-                  </div>
-              </div>
-              <div id="feeBox" class="settings-content">
-                  <label class="form-label">Price</label>
-                  <input type="number" class="form-control" placeholder="$">
-              </div>
-            </div>
-          </div>
 
         </div>
+
 
         <!-- Right Contents -->
         <div class="col-6 col-md-4 ">
