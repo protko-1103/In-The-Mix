@@ -5,21 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>In the Mix</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
-
-
     <link rel="stylesheet" href="styles/style.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="icon" type="image/svg+xml" href="images/ITM-Favicon.svg"> 
+    <link rel="icon" type="image/svg+xml" href="images/ITM-Favicon.svg">
   </head>
 
   <body>
-     <section class="container p-5">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light py-3">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand d-none d-lg-block" href="index.html"><img src="images/ITM-Logo-Final-Solid.svg" alt="In The Mix Logo" style="height: 55px; width: auto;"></a>
 
+          <!-- hamburger, appears when collapsing -->
+          <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Search bar -->
+           <!-- move search bar once the logo is added -->
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn" type="submit">Search</button>
+          </form>
+
+          <!-- Links -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" id="home-btn" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="events-btn" href="#">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="register-btn" href="#">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id= "signin-btn" data-bs-target="#signupModal" data-bs-toggle="modal">Sign In</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+<!-- form starts here -->
+<form id="eventForm" class="needs-validation" novalidate>
+    <section class="container p-5">
       <h1>Add Event</h1>
-
+      
       <div class="row">
         <!-- Upload Form -->
         <div class="col-md-8">
@@ -27,24 +68,27 @@
           <!-- Event Name -->
           <div class="mb-3">
             <label for="eventNameInput" class="form-label">Event Name</label>
-            <input type="text" class="form-control" id="eventNameInput" placeholder="Give your event a name">
+            <input type="text" class="form-control" id="eventNameInput" placeholder="Give your event a name" required>
+            <div class="invalid-feedback">Event name is required.</div>
           </div>
 
           <!-- Event Description -->
           <div class="mb-3">
             <label for="descriptionTextarea1" class="form-label">Description (required)</label>
-            <div id="passwordhelpBlock" class="form-text"></div>
-            <textarea class="form-control" id="descriptionTextarea1" rows="3"></textarea>          
+            <textarea class="form-control" id="descriptionTextarea1" rows="3" required></textarea>
+            <div class="invalid-feedback">Description is required.</div>          
           </div>
 
           <!-- Tags -->
-          <div class="mb-3">
-            <label for="tagsInput" class="form-label">You can add 5 topics</label>
-            <input type="text" class="form-control" id="tagsInput" placeholder="">
+          <div class="mb-3 tags-input">
+            <!-- add a hint -->
+            <label for="inputTag" class="form-label">You can add 5 topics</label>
+            <ul id="tags"></ul>
+            <input type="text" class="form-control" id="inputTag" placeholder="Enter topic name">
           </div>
 
-            <!-- LOCATION -->
-            <label class="form-label">Location</label>
+          <!-- LOCATION -->
+          <label class="form-label">Location</label>
             <div class="location-box">
                 <div class="location-tabs">
                     <div class="tab active" data-type="inperson">
@@ -63,27 +107,34 @@
                 <div>
                     <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-search"></i></span>
-                        <input type="text" class="form-control" placeholder="Search location">
+                        <input type="text" class="form-control" placeholder="Search location" required>
                     </div>
                 </div>
             </div>
 
             <!-- Select Date and Time -->
+            
             <div class="mb-3">
-              <label for="dateTimePicker" class="form-label">Select Date & Time</label>
-              
+              <label class="form-label">Select Start Date & Time</label>
+
               <div class="input-group">
-                <input type="date" class="form-control">
-                <input type="time" class="form-control">
+                <input type="date" class="form-control" id="startDate" required>
+                <div class="invalid-feedback">Start date is required.</div>
+
+                <input type="time" class="form-control" id="startTime" required>
+                <div class="invalid-feedback">Start time is required.</div>
               </div>
-            </div>       
+            </div>                   
 
             <!-- End Time -->
-            <label class="form-label mt-3">End Time</label>
-            <input class="form-control mb-3" type="time" id="endTimePicker" name="endTimePicker">
+            <label class="form-label mt-3" for="endTimePicker">End Date & Time</label>
+            <input class="form-control mb-3" type="datetime-local" id="endTimePicker" required>   
+            <div class="invalid-feedback">End date is required.</div>         
 
             <!-- Duration div that appears when the user inputs an end time -->
-            <div class="mb-3" id="duration"></div>
+            <div id="duration" class="duration-content">
+              <p id="result">Enter dates and times above to see the duration.</p>
+            </div>            
 
             <!-- EVENT SETTINGS -->
             <div class="mt-4">
@@ -99,7 +150,7 @@
 
                 <div id="communicationBox" class="settings-content">
                     <label class="form-label">How will attendees contact you?</label>
-                    <input type="text" class="form-control" placeholder="Email or phone">
+                    <input type="text" class="form-control" placeholder="Type your email or phone">
                 </div>
 
 
@@ -149,21 +200,22 @@
 
 
         <!-- Right Contents -->
-        <div class="col-6 col-md-4 ">
+        <div class="col-12 col-md-4 ">
           <div class="file-wrapper">
             <div class="upload-btn-wrapper">
               <button class="btn upload-file font-weight-500">
-              <span class="upload-btn">
-                <i class="bi bi-cloud-check-fill d-block font-50 pb-2">
-                  Browse folders here
-                </i>
-              </span>
-              <span class = "upload-select-button" id="blankFile">Supports JPG, JPG2000 and PNG</span>
-              <span class="success">
-                <i class="bi bi-check-circle text-success"></i>
-              </span>
-            </button>
-            <input type="file" name="selectFile" id="selectFile">
+                <span class="upload-btn">
+                  <i class="bi bi-cloud-check-fill d-block font-50 pb-2">
+                    Browse folders here
+                  </i>
+                </span>
+                <span class = "upload-select-button" id="blankFile">Supports JPG, JPG2000 and PNG</span>
+                <span class="success">
+                  <i class="bi bi-check-circle text-success"></i>
+                </span>
+              </button>
+              <input type="file" name="selectFile" id="selectFile" required>
+              <div class="invalid-feedback">Please upload an image.</div>
             </div>
           </div>
         </div>
@@ -171,14 +223,11 @@
       </div>
      </section>
 
-     <section class="container p-5">
-      </section>
-
       <section class="container p-5">
         <!-- Action Bar -->
         <div class="d-flex justify-content-between align-items-center border-top pt-4 mt-4">
           <!-- cancel button -->
-          <button type="button" class="btn btn-outline-secondary">Cancel</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='index.html'">Cancel</button>
 
           <!-- Right buttons -->
           <div class="btn-group" role="group">
@@ -188,10 +237,64 @@
           </div>
       </div>        
       </section>
+</form>
+<!-- form ends here -->
 
-  <!-- Flatpickr JS -->
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      <section class="footer">
+        <footer class="container py-5 text-white"> 
+          <div class="row"> 
+            
+            <div class="col-6 col-md-3 mb-3"> 
+              <h5>Your Account</h5> 
+              <ul class="nav flex-column"> 
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" data-bs-target="#signupModal" data-bs-toggle="modal">Sign In</a></li> 
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Log In</a></li> 
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Upload an Event</a></li> 
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Help</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms & Conditions</a></li>  
+              </ul> 
+            </div> 
 
-  <script src="script.js"></script>
+            <div class="col-6 col-md-3 mb-3"> 
+              <h5>Community</h5> 
+              <ul class="nav flex-column"> 
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Events</a></li> 
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Groups</a></li> 
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li> 
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cities</a></li>  
+              </ul> </div> 
+              
+              <div class="col-md-5 offset-md-1 mb-3"> 
+                <form> 
+                  <h5>Subscribe to our newsletter</h5>
+                  <p>Monthly digest of what's new and exciting from us.</p> 
+                  <div class="d-flex flex-column flex-sm-row w-100 gap-2"> 
+                    <label for="newsletter1" class="visually-hidden">Email address</label> 
+                    <input id="newsletter1" type="email" class="form-control" placeholder="Email address"> 
+                    <button class="btn btn-primary" type="button">Subscribe</button> 
+                  </div> 
+                </form> 
+              </div> 
+            </div> 
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"> <p>&copy; 2025 Company, Inc. All rights reserved.</p> 
+              <ul class="list-unstyled d-flex"> 
+                <li class="ms-3">
+                  <a class="link-body-emphasis" href="#" aria-label="Instagram">
+                    <h3><i class="bi bi-instagram"></i></h3>
+                  </a>
+                </li> 
+                <li class="ms-3">
+                  <a class="link-body-emphasis" href="#" aria-label="Facebook">
+                    <h3><i class="bi bi-facebook"></i></h3>
+                  </a>
+                </li> 
+              </ul> 
+            </div> 
+          </footer> 
+      </section>
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </body>
 </html>

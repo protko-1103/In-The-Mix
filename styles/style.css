@@ -56,7 +56,7 @@ nav form .btn:hover{
 }
 
 /* uploadevents.html: file upload box */
-/* fix the display of the button */
+/* fix the display of the 'browse folders here' button */
 .file-wrapper {
     width: 100%;
     margin: auto;
@@ -67,14 +67,18 @@ nav form .btn:hover{
 .upload-btn-wrapper {
     position: relative;
     overflow: hidden;
-    display: inline-block;
     cursor: pointer;
+    width: 100%;
+    max-width: 100%;
+    display: block;
 }
 .upload-file {
     border: 2px dashed var(--gray);
     color: var(--secondary-color);
-    width: 400px;
-    height: 250px;
+    width: 100%;
+    white-space: normal;
+    max-width: 100%;
+    padding: 1.5rem 1rem;
     border-radius: 8px;
     font-size: 15px;
     cursor: pointer;
@@ -114,8 +118,37 @@ nav form .btn:hover{
 
 .upload-btn {
     display: block;
+    width: 100%;
     font-size: 18px;
     color: var(--primary-color);
+}
+
+/* Tag box */
+.tags-input ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tags-input li {
+    display: inline-block;
+    background-color: #f2f2f2;
+    color: #333;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.tags-input input[type="text"]:focus {
+    outline: none;
+}
+.tags-input .delete-button {
+    background-color: transparent;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    margin-left: 5px;
 }
 
 /* Location box */
@@ -163,6 +196,14 @@ nav form .btn:hover{
     border-radius: 10px !important;
 }
 
+/* Duration Box */
+.duration-content {
+    margin: .9rem 0 1.5rem;
+    padding-left: .5rem;
+    display: none;
+    transition: all .25s ease;
+}
+
 /* Toggle rows */
 .settings-row {
     display: flex;
@@ -176,10 +217,16 @@ nav form .btn:hover{
     margin: .8rem 0 1.2rem;
     padding-left: .5rem;
     display: none;
+    transition: all .25s ease;
 }
 
 .settings-content.show {
-    display: block;
+    display: block !important;
+}
+
+/* Force show when toggled */
+.settings-content.show {
+    display: block !important;
 }
 
 
