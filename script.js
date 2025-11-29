@@ -1,12 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const registerBtn = document.getElementById("register-btn");
-  if (registerBtn) {
-    registerBtn.addEventListener("click", (event) => {
-      event.preventDefault();
-      window.location.href = "register.html";
-    });
-  }
-
   const eventsBtn = document.getElementById("events-btn");
   if (eventsBtn) {
     eventsBtn.addEventListener("click", (event) => {
