@@ -67,6 +67,14 @@ iframe {
     border: 0;
 }
 
+/* sampleevents.html */
+.event-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /* uploadevents.html: file upload box */
 /* fix the display of the 'browse folders here' button */
 .file-wrapper {

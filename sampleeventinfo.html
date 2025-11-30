@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Event Info</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles/style.css" />
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
 
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-    <link rel="icon" type="image/svg+xml" href="images/ITM-Favicon.svg" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/svg+xml" href="images/ITM-Favicon.svg">
   </head>
 
   <body>
@@ -28,8 +26,7 @@
           ><img
             src="images/ITM-Logo-Final-Solid.svg"
             alt="In The Mix Logo"
-            style="height: 55px; width: auto"
-        /></a>
+            style="height: 55px; width: auto"></a>
 
         <!-- hamburger, appears when collapsing -->
         <button
@@ -39,8 +36,7 @@
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -51,8 +47,7 @@
             class="form-control me-2"
             type="search"
             placeholder="Search"
-            aria-label="Search"
-          />
+            aria-label="Search">
           <button class="btn" type="submit">Search</button>
         </form>
 
@@ -89,679 +84,649 @@
     <!-- Multi-page Event cards -->
 
     <section class="container p-5">
+
       <!-- Goat Yoga Event 1 -->
-      <div class="event-section" style="display: none"></div>
       <section id="goat-yoga" class="event-section d-none">
-      <div class="row">
-        <div class="col-md-8 themed-grid-col">
-          <!-- event title -->
-          <div class="card mb-3" style="max-width: 540px">
-            <div class="card-body">
-              <!-- In the h3 card-title, you can put the name of the event -->
-              <h3 class="card-title">Goat Yoga</h3>
-              <p class="card-text">
-                <b> Ideal for beginners and seasoned yogis!</b> <br /><br />
-                Step away from the noise and unwind with a unique wellness
-                experience on our peaceful little farm. Every Saturday at 10 AM,
-                we host a guided yoga session where you’ll be joined by our
-                friendly, curious goats who love to interact with guests
-                throughout the class. Whether they’re wandering around your mat,
-                gently nudging you for attention, or simply adding a bit of
-                playful charm to the practice, they create a relaxing and joyful
-                atmosphere. It’s the perfect blend of mindfulness, movement, and
-                a little farm style fun.
-              </p>
+        <div class="row">
+          <div class="col-md-8 themed-grid-col">
+            <!-- event title -->
+            <div class="card mb-3">
+              <div class="card-body">
+                <!-- In the h3 card-title, you can put the name of the event -->
+                <h3 class="card-title">Goat Yoga</h3>
+                <p class="card-text fw-bold">Ideal for beginners and seasoned yogis!</p>
+                <p class="card-text">
+                  Step away from the noise and unwind with a unique wellness
+                  experience on our peaceful little farm. Every Saturday at 10 AM,
+                  we host a guided yoga session where you’ll be joined by our
+                  friendly, curious goats who love to interact with guests
+                  throughout the class.
+                </p>
+                <p class="card-text">
+                  Whether they’re wandering around your mat,
+                  gently nudging you for attention, or simply adding a bit of
+                  playful charm to the practice, they create a relaxing and joyful
+                  atmosphere. It’s the perfect blend of mindfulness, movement, and
+                  a little farm style fun.
+                </p>
+              </div>
+            </div>
+
+            <!-- event schedule -->
+            <div class="card mb-3">
+              <div class="card-body">
+                <h3 class="card-title">Event Schedule</h3>
+
+                <table class="table table-hover">
+                  <thead class="table-info">
+                    <tr>
+                      <th scope="col">Time</th>
+                      <th scope="col">Session</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <!-- edit this -->
+                      <th scope="row">10:00am</th>
+                      <td colspan="2">Welcome & Introduction</td>
+                    </tr>
+
+                    <tr>
+                      <!-- edit this -->
+                      <th scope="row">10:05am</th>
+                      <td colspan="2">Guided Goat Yoga Session</td>
+                    </tr>
+
+                    <tr>
+                      <!-- edit this -->
+                      <th scope="row">11:00am</th>
+                      <td colspan="2">Cool-Down & Relaxation</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Event Registration -->
+            <div class="card mb-3">
+              <form class="card-body">
+                <div class="mb-3 row">
+                  <div class="col">
+                    <label class="form-label">First name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First name"
+                      aria-label="First name">
+                  </div>
+                  <div class="col">
+                    <label class="form-label">Last name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Last name"
+                      aria-label="Last name">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Example@email.com"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">
+                    We'll never share your email with anyone else.
+                  </div>
+                </div>
+
+                <div class="mb-3 col-12">
+                  <label for="inputAddress" class="form-label">Address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder="1234 Main St">
+                </div>
+
+                <div class="mb-3 col-12">
+                  <label for="inputAddress2" class="form-label">Address 2</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress2"
+                    placeholder="Apartment, studio, or floor">
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-sm-7">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="City"
+                      aria-label="City">
+                  </div>
+                  <div class="col-sm">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="State"
+                      aria-label="State">
+                  </div>
+                  <div class="col-sm">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Zip"
+                      aria-label="Zip">
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-4">
+                  Register
+                </button>
+              </form>
             </div>
           </div>
 
-          <!-- event schedule -->
-          <div class="card mb-3" style="max-width: 540px">
-            <div class="card-body">
-              <h3 class="card-title">Event Schedule</h3>
+          <!-- Right column -->
 
-              <table class="table table-hover">
-                <thead class="table-info">
-                  <tr>
-                    <th scope="col">Time</th>
-                    <th scope="col">Session</th>
-                  </tr>
-                </thead>
+          <div class="col-md-4 themed-grid-col">
+            <!-- image of event -->
+            <img
+              src="https://images.unsplash.com/photo-1634140325686-b507b470e48a?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="image of the event goes here"
+              class="img-fluid">
 
-                <tbody>
-                  <tr>
-                    <!-- edit this -->
-                    <th scope="row">10:00am</th>
-                    <td colspan="2">Welcome & Introduction</td>
-                  </tr>
+            <!-- map of event -->
+            
+            <div class="mt-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.257321568753!2d-73.9878530845946!3d40.74844007932789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a670f27c!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1678912345678!5m2!1sen!2sus"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            
+          </div>
+        </div>
+      </section>
 
-                  <tr>
-                    <!-- edit this -->
-                    <th scope="row">10:05am</th>
-                    <td colspan="2">Guided Goat Yoga Session</td>
-                  </tr>
+      <!-- Turkey Fest Event 2 -->
+      <section id="turkey-fest" class="event-section d-none">
+        <div class="row">
+          <div class="col-md-8 themed-grid-col">
+            <!-- event title -->
+            <div class="card mb-3">
+              <div class="card-body">
+                <!-- In the h3 card-title, you can put the name of the event -->
+                <h3 class="card-title">Turkey Fest</h3>
+                <p class="card-text fw-bold">SECOND ANNUAL TURKEY LEG FEST!</p>
+                <p class="card-text">
+                  <span class="fw-bold">Get ready, because the holiday
+                  season is about to go wild!</span> 
+                  The SECOND ANNUAL TURKEY LEG FEST is
+                  back and bigger than ever!!! If you’re even slightly obsessed
+                  with turkey legs, this is your miracle come true.
+                </p>
 
-                  <tr>
-                    <!-- edit this -->
-                    <th scope="row">11:00am</th>
-                    <td colspan="2">Cool-Down & Relaxation</td>
-                  </tr>
-                </tbody>
-              </table>
+                <p class="card-text">
+                  We’re talking <span class="fw-bold">10 food trucks</span>, each serving insane, over-the-top turkey leg
+                  creations you won’t find anywhere else! Smoked, glazed, stuffed,
+                  dipped, dripping, spicy, sweet… you name it, someone’s serving
+                  it. Pair it with our legendary seasonal eggnog and you’re
+                  officially in holiday heaven. <br>The vibes? <b>WILD LIKE A TURKEY.</b>
+                  We’ve got Christmas movies blasting on a giant projector, music
+                  pumping, lights glowing, a pie eating contest and people dancing
+                  off their food comas. This isn’t just a festival, it’s THE
+                  holiday kickoff. If you’re not here… well then you’re missing
+                  out!
+                </p>
+              </div>
+            </div>
+
+            <!-- event schedule -->
+            <div class="card mb-3">
+              <div class="card-body">
+                <h3 class="card-title">Event Schedule</h3>
+
+                <table class="table table-hover">
+                  <thead class="table-info">
+                    <tr>
+                      <th scope="col">Time</th>
+                      <th scope="col">Session</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <!-- edit this -->
+                      <th scope="row">12:00pm</th>
+                      <td colspan="2">Gates Open</td>
+                    </tr>
+
+                    <tr>
+                      <!-- edit this -->
+                      <th scope="row">12:30pm</th>
+                      <td colspan="2">Christmas Movie Kickoff</td>
+                    </tr>
+
+                    <tr>
+                      <!-- edit this -->
+                      <th scope="row">1:00pm</th>
+                      <td colspan="2">Turkey Leg Tasting Tour Begins</td>
+                    </tr>
+
+                    <tr>
+                      <!-- edit this -->
+                      <th scope="row">2:00pm</th>
+                      <td colspan="2">DJ Gobble Beats Live</td>
+                    </tr>
+
+                    <tr>
+                      <!-- edit this -->
+                      <th scope="row">3:00pm</th>
+                      <td colspan="2">Pie Eating Contest</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Event Registration -->
+            <div class="card mb-3">
+              <form class="card-body">
+                <div class="mb-3 row">
+                  <div class="col">
+                    <label class="form-label">First name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First name"
+                      aria-label="First name">
+                  </div>
+                  <div class="col">
+                    <label class="form-label">Last name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Last name"
+                      aria-label="Last name">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Example@email.com"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">
+                    We'll never share your email with anyone else.
+                  </div>
+                </div>
+
+                <div class="mb-3 col-12">
+                  <label for="inputAddress" class="form-label">Address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder="1234 Main St">
+                </div>
+
+                <div class="mb-3 col-12">
+                  <label for="inputAddress2" class="form-label">Address 2</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress2"
+                    placeholder="Apartment, studio, or floor">
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-sm-7">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="City"
+                      aria-label="City">
+                  </div>
+                  <div class="col-sm">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="State"
+                      aria-label="State">
+                  </div>
+                  <div class="col-sm">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Zip"
+                      aria-label="Zip">
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-4">
+                  Register
+                </button>
+              </form>
             </div>
           </div>
 
-          <!-- Event Registration -->
-          <div class="card mb-3" style="max-width: 540px">
-            <form class="card-body">
-              <div class="mb-3 row">
-                <div class="col">
-                  <label class="form-label">First name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="First name"
-                    aria-label="First name"
-                  />
-                </div>
-                <div class="col">
-                  <label class="form-label">Last name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Last name"
-                    aria-label="Last name"
-                  />
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Email address</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Example@email.com"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                />
-                <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
-                </div>
-              </div>
+          <!-- Right column -->
 
-              <div class="mb-3 col-12">
-                <label for="inputAddress" class="form-label">Address</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputAddress"
-                  placeholder="1234 Main St"
-                />
-              </div>
+          <div class="col-md-4 themed-grid-col">
+            <!-- image of event -->
+            <img
+              src="https://cdn.pixabay.com/photo/2015/02/25/07/39/christmas-wallpaper-648430_960_720.jpg"
+              alt="image of the event goes here">
 
-              <div class="mb-3 col-12">
-                <label for="inputAddress2" class="form-label">Address 2</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputAddress2"
-                  placeholder="Apartment, studio, or floor"
-                />
-              </div>
-
-              <div class="row g-3">
-                <div class="col-sm-7">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="City"
-                    aria-label="City"
-                  />
-                </div>
-                <div class="col-sm">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="State"
-                    aria-label="State"
-                  />
-                </div>
-                <div class="col-sm">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Zip"
-                    aria-label="Zip"
-                  />
-                </div>
-              </div>
-
-              <button type="submit" class="btn btn-primary mt-4">
-                Register
-              </button>
-            </form>
+            <!-- map of event -->
+            <div class="mt-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.257321568753!2d-73.9878530845946!3d40.74844007932789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a670f27c!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1678912345678!5m2!1sen!2sus"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
           </div>
         </div>
+      </section>
+    
+      <!-- Jester Market Event 3 -->
+      <section id="jester-market" class="event-section d-none">
+        <div class="row">
+          <div class="col-md-8 themed-grid-col">
+            <!-- event title -->
+            <div class="card mb-3">
+              <div class="card-body">
+                <!-- In the h3 card-title, you can put the name of the event -->
+                <h3 class="card-title">Jester Market</h3>
+                <p class="card-text">
+                  <b>Are you up to no good?</b> <br> <br>Do you enjoy stirring up a little
+                  harmless trouble? Does the pull of secrets and sly smiles tempt
+                  you? Then step into the Jester Market, a place where mischief is
+                  encouraged and curiosity is always rewarded.<br><br> Imagine a refined
+                  version of Mardi Gras with lanterns glowing overhead, masked
+                  performers drifting between the crowds, and laughter weaving
+                  through the night like a quiet spell. Entertainment fills every
+                  corner. Jesters tell clever jokes, storytellers captivate with
+                  their tales, and performers seem to know exactly when you need a
+                  laugh. <br><br>The vendors are part of the fun too. Each booth feels
+                  like a world of playful trickery with strange curios, unusual
+                  collectibles, and rare treasures offered with a wink or a
+                  riddle. Browsing often becomes a game and discovering something
+                  special feels like solving a secret.<br><br> If you are drawn to the
+                  unusual, the humorous, and the wonderfully bizarre, the Jester
+                  Market is your sanctuary. Step inside and let the night pull you
+                  deeper. The jokes, the mysteries, and the mischief are waiting.
+                </p>
+              </div>
+            </div>
 
-        <!-- Right column -->
+            <!-- event schedule -->
+            <div class="card mb-3">
+              <div class="card-body">
+                <h3 class="card-title">Event Schedule</h3>
 
-        <div class="col-md-4 themed-grid-col">
-          <!-- image of event -->
-          <img
-            src="https://images.unsplash.com/photo-1634140325686-b507b470e48a?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="image of the event goes here"
-          />
+                <table class="table table-hover">
+                  <thead class="table-info">
+                    <tr>
+                      <th scope="col">Time</th>
+                      <th scope="col">Session</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
 
-          <!-- map of event -->
-          <img src="" alt="map of the event location" />
+                  <tbody>
+                    <tr>
+                      <!-- edit this -->
+                      <th scope="row">6:00pm</th>
+                      <td colspan="2">The Lantern Lighting</td>
+                    </tr>
+
+                    <tr>
+                      <!-- edit this -->
+                      <th scope="row">6:30pm</th>
+                      <td colspan="2">Storytellers’ Circle</td>
+                    </tr>
+
+                    <tr>
+                      <!-- edit this -->
+                      <th scope="row">7:00pm</th>
+                      <td colspan="2">The Jester Trials</td>
+                    </tr>
+
+                    <tr>
+                      <!-- edit this -->
+                      <th scope="row">8:00pm</th>
+                      <td colspan="2">Masked Performance: “The Night That Lied”</td>
+                    </tr>
+
+                    <tr>
+                      <!-- edit this -->
+                      <th scope="row">9:00pm</th>
+                      <td colspan="2">The Mischief Auction</td>
+                    </tr>
+
+                    <tr>
+                      <!-- edit this -->
+                      <th scope="row">10:30pm</th>
+                      <td colspan="2">Closing Ritual: The Last Laugh</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Event Registration -->
+            <div class="card mb-3">
+              <form class="card-body">
+                <div class="mb-3 row">
+                  <div class="col">
+                    <label class="form-label">First name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First name"
+                      aria-label="First name">
+                  </div>
+                  <div class="col">
+                    <label class="form-label">Last name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Last name"
+                      aria-label="Last name">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Example@email.com"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">
+                    We'll never share your email with anyone else.
+                  </div>
+                </div>
+
+                <div class="mb-3 col-12">
+                  <label for="inputAddress" class="form-label">Address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder="1234 Main St">
+                </div>
+
+                <div class="mb-3 col-12">
+                  <label for="inputAddress2" class="form-label">Address 2</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress2"
+                    placeholder="Apartment, studio, or floor">
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-sm-7">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="City"
+                      aria-label="City">
+                  </div>
+                  <div class="col-sm">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="State"
+                      aria-label="State"
+                    >
+                  </div>
+                  <div class="col-sm">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Zip"
+                      aria-label="Zip"
+                    >
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-4">
+                  Register
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right column -->
+
+          <div class="col-md-4 themed-grid-col">
+            <!-- image of event -->
+            <img
+              src="https://images.unsplash.com/photo-1569574491961-6fe02f4348c2?q=80&w=1125&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="image of the event goes here">
+
+            <!-- map of event -->
+            <div class="mt-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.257321568753!2d-73.9878530845946!3d40.74844007932789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a670f27c!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1678912345678!5m2!1sen!2sus"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
     </section>
 
-    <!-- Turkey Fest Event 2 -->
-    <section id="turkey-fest" class="event-section d-none">
-      <div class="event-section" id="event-2" style="display: none"></div>
-      <div class="row">
-        <div class="col-md-8 themed-grid-col">
-          <!-- event title -->
-          <div class="card mb-3" style="max-width: 540px">
-            <div class="card-body">
-              <!-- In the h3 card-title, you can put the name of the event -->
-              <h3 class="card-title">Turkey Fest</h3>
-              <p class="card-text">
-                <b>SECOND ANNUAL TURKEY LEG FEST!<br><br> Get ready, because the holiday
-                season is about to go wild! <b>The SECOND ANNUAL TURKEY LEG FEST</b> is
-                back and bigger than ever!!! If you’re even slightly obsessed
-                with turkey legs, this is your miracle come true. <br><br>We’re talking
-                <b>10 food trucks</b>, each serving insane, over-the-top turkey leg
-                creations you won’t find anywhere else! Smoked, glazed, stuffed,
-                dipped, dripping, spicy, sweet… you name it, someone’s serving
-                it. Pair it with our legendary seasonal eggnog and you’re
-                officially in holiday heaven. <br><br>The vibes? <b>WILD LIKE A TURKEY.</b>
-                We’ve got Christmas movies blasting on a giant projector, music
-                pumping, lights glowing, a pie eating contest and people dancing
-                off their food comas. This isn’t just a festival, it’s THE
-                holiday kickoff. If you’re not here… well then you’re missing
-                out!
-              </p>
-            </div>
-          </div>
-
-          <!-- event schedule -->
-          <div class="card mb-3" style="max-width: 540px">
-            <div class="card-body">
-              <h3 class="card-title">Event Schedule</h3>
-
-              <table class="table table-hover">
-                <thead class="table-info">
-                  <tr>
-                    <th scope="col">Time</th>
-                    <th scope="col">Session</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <!-- edit this -->
-                    <th scope="row">12:00pm</th>
-                    <td colspan="2">Gates Open</td>
-                  </tr>
-
-                  <tr>
-                    <!-- edit this -->
-                    <th scope="row">12:30pm</th>
-                    <td colspan="2">Christmas Movie Kickoff</td>
-                  </tr>
-
-                  <tr>
-                    <!-- edit this -->
-                    <th scope="row">1:00pm</th>
-                    <td colspan="2">Turkey Leg Tasting Tour Begins</td>
-                  </tr>
-
-                  <tr>
-                    <!-- edit this -->
-                    <th scope="row">2:00pm</th>
-                    <td colspan="2">DJ Gobble Beats Live</td>
-                  </tr>
-
-                  <tr>
-                    <!-- edit this -->
-                    <th scope="row">3:00pm</th>
-                    <td colspan="2">Pie Eating Contest</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <!-- Event Registration -->
-          <div class="card mb-3" style="max-width: 540px">
-            <form class="card-body">
-              <div class="mb-3 row">
-                <div class="col">
-                  <label class="form-label">First name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="First name"
-                    aria-label="First name"
-                  />
-                </div>
-                <div class="col">
-                  <label class="form-label">Last name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Last name"
-                    aria-label="Last name"
-                  />
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Email address</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Example@email.com"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                />
-                <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
-                </div>
-              </div>
-
-              <div class="mb-3 col-12">
-                <label for="inputAddress" class="form-label">Address</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputAddress"
-                  placeholder="1234 Main St"
-                />
-              </div>
-
-              <div class="mb-3 col-12">
-                <label for="inputAddress2" class="form-label">Address 2</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputAddress2"
-                  placeholder="Apartment, studio, or floor"
-                />
-              </div>
-
-              <div class="row g-3">
-                <div class="col-sm-7">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="City"
-                    aria-label="City"
-                  />
-                </div>
-                <div class="col-sm">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="State"
-                    aria-label="State"
-                  />
-                </div>
-                <div class="col-sm">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Zip"
-                    aria-label="Zip"
-                  />
-                </div>
-              </div>
-
-              <button type="submit" class="btn btn-primary mt-4">
-                Register
-              </button>
-            </form>
-          </div>
-        </div>
-
-        <!-- Right column -->
-
-        <div class="col-md-4 themed-grid-col">
-          <!-- image of event -->
-          <img
-            src="https://cdn.pixabay.com/photo/2015/02/25/07/39/christmas-wallpaper-648430_960_720.jpg"
-            alt="image of the event goes here"
-          />
-
-          <!-- map of event -->
-          <img src="" alt="map of the event location" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Jester Market Event 3 -->
-    <section id="jester-market" class="event-section d-none">
-      <div class="event-section" id="event-3" style="display: none"></div>
-      <div class="row">
-        <div class="col-md-8 themed-grid-col">
-          <!-- event title -->
-          <div class="card mb-3" style="max-width: 540px">
-            <div class="card-body">
-              <!-- In the h3 card-title, you can put the name of the event -->
-              <h3 class="card-title">Jester Market</h3>
-              <p class="card-text">
-                <b>Are you up to no good?</b> <br> <br>Do you enjoy stirring up a little
-                harmless trouble? Does the pull of secrets and sly smiles tempt
-                you? Then step into the Jester Market, a place where mischief is
-                encouraged and curiosity is always rewarded.<br><br> Imagine a refined
-                version of Mardi Gras with lanterns glowing overhead, masked
-                performers drifting between the crowds, and laughter weaving
-                through the night like a quiet spell. Entertainment fills every
-                corner. Jesters tell clever jokes, storytellers captivate with
-                their tales, and performers seem to know exactly when you need a
-                laugh. <br><br>The vendors are part of the fun too. Each booth feels
-                like a world of playful trickery with strange curios, unusual
-                collectibles, and rare treasures offered with a wink or a
-                riddle. Browsing often becomes a game and discovering something
-                special feels like solving a secret.<br><br> If you are drawn to the
-                unusual, the humorous, and the wonderfully bizarre, the Jester
-                Market is your sanctuary. Step inside and let the night pull you
-                deeper. The jokes, the mysteries, and the mischief are waiting.
-              </p>
-            </div>
-          </div>
-
-          <!-- event schedule -->
-          <div class="card mb-3" style="max-width: 540px">
-            <div class="card-body">
-              <h3 class="card-title">Event Schedule</h3>
-
-              <table class="table table-hover">
-                <thead class="table-info">
-                  <tr>
-                    <th scope="col">Time</th>
-                    <th scope="col">Session</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <!-- edit this -->
-                    <th scope="row">6:00pm</th>
-                    <td colspan="2">The Lantern Lighting</td>
-                  </tr>
-
-                  <tr>
-                    <!-- edit this -->
-                    <th scope="row">6:30pm</th>
-                    <td colspan="2">Storytellers’ Circle</td>
-                  </tr>
-
-                  <tr>
-                    <!-- edit this -->
-                    <th scope="row">7:00pm</th>
-                    <td colspan="2">The Jester Trials</td>
-                  </tr>
-
-                  <tr>
-                    <!-- edit this -->
-                    <th scope="row">8:00pm</th>
-                    <td colspan="2">Masked Performance: “The Night That Lied”</td>
-                  </tr>
-
-                  <tr>
-                    <!-- edit this -->
-                    <th scope="row">9:00pm</th>
-                    <td colspan="2">The Mischief Auction</td>
-                  </tr>
-
-                  <tr>
-                    <!-- edit this -->
-                    <th scope="row">10:30pm</th>
-                    <td colspan="2">Closing Ritual: The Last Laugh</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <!-- Event Registration -->
-          <div class="card mb-3" style="max-width: 540px">
-            <form class="card-body">
-              <div class="mb-3 row">
-                <div class="col">
-                  <label class="form-label">First name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="First name"
-                    aria-label="First name"
-                  />
-                </div>
-                <div class="col">
-                  <label class="form-label">Last name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Last name"
-                    aria-label="Last name"
-                  />
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Email address</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Example@email.com"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                />
-                <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
-                </div>
-              </div>
-
-              <div class="mb-3 col-12">
-                <label for="inputAddress" class="form-label">Address</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputAddress"
-                  placeholder="1234 Main St"
-                />
-              </div>
-
-              <div class="mb-3 col-12">
-                <label for="inputAddress2" class="form-label">Address 2</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputAddress2"
-                  placeholder="Apartment, studio, or floor"
-                />
-              </div>
-
-              <div class="row g-3">
-                <div class="col-sm-7">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="City"
-                    aria-label="City"
-                  />
-                </div>
-                <div class="col-sm">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="State"
-                    aria-label="State"
-                  />
-                </div>
-                <div class="col-sm">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Zip"
-                    aria-label="Zip"
-                  />
-                </div>
-              </div>
-
-              <button type="submit" class="btn btn-primary mt-4">
-                Register
-              </button>
-            </form>
-          </div>
-        </div>
-
-        <!-- Right column -->
-
-        <div class="col-md-4 themed-grid-col">
-          <!-- image of event -->
-          <img
-            src="https://images.unsplash.com/photo-1569574491961-6fe02f4348c2?q=80&w=1125&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="image of the event goes here"
-          />
-
-          <!-- map of event -->
-          <img src="" alt="map of the event location" />
-        </div>
-      </div>
-    </section>
+      
+    
 
     <!-- Footer -->
-    <section class="footer">
-      <footer class="container py-5 text-white">
-        <div class="row">
-          <div class="col-6 col-md-3 mb-3">
-            <h5>Your Account</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a
-                  href="#"
-                  class="nav-link p-0 text-body-secondary"
-                  data-bs-target="#signupModal"
-                  data-bs-toggle="modal"
-                  >Sign In</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Log In</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary"
-                  >Upload an Event</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Help</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary"
-                  >Terms & Conditions</a
-                >
-              </li>
-            </ul>
-          </div>
+   <section class="footer">
+    <footer class="container py-5 text-white"> 
+      <div class="row"> 
+         
+        <div class="col-6 col-md-3 mb-3"> 
+          <h5>Your Account</h5> 
+          <ul class="nav flex-column"> 
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" data-bs-target="#signupModal" data-bs-toggle="modal">Sign In</a></li> 
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Log In</a></li> 
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Upload an Event</a></li> 
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Help</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms & Conditions</a></li>  
+          </ul> 
+        </div> 
 
-          <div class="col-6 col-md-3 mb-3">
-            <h5>Community</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Events</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Groups</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Blog</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Cities</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-md-5 offset-md-1 mb-3">
-            <form>
+        <div class="col-6 col-md-3 mb-3"> 
+          <h5>Community</h5> 
+          <ul class="nav flex-column"> 
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Events</a></li> 
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Groups</a></li> 
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li> 
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cities</a></li>  
+          </ul> </div> 
+          
+          <div class="col-md-5 offset-md-1 mb-3"> 
+            <form> 
               <h5>Subscribe to our newsletter</h5>
-              <p>Monthly digest of what's new and exciting from us.</p>
-              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                <label for="newsletter1" class="visually-hidden"
-                  >Email address</label
-                >
-                <input
-                  id="newsletter1"
-                  type="email"
-                  class="form-control"
-                  placeholder="Email address"
-                />
-                <button class="btn btn-primary" type="button">Subscribe</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div
-          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
-        >
-          <p>&copy; 2025 Company, Inc. All rights reserved.</p>
-          <ul class="list-unstyled d-flex">
+              <p>Monthly digest of what's new and exciting from us.</p> 
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2"> 
+                <label for="newsletter1" class="visually-hidden">Email address</label> 
+                <input id="newsletter1" type="email" class="form-control" placeholder="Email address"> 
+                <button class="btn btn-primary" type="button">Subscribe</button> 
+              </div> 
+            </form> 
+          </div> 
+        </div> 
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"> <p>&copy; 2025 Company, Inc. All rights reserved.</p> 
+          <ul class="list-unstyled d-flex"> 
             <li class="ms-3">
               <a class="link-body-emphasis" href="#" aria-label="Instagram">
                 <h3><i class="bi bi-instagram"></i></h3>
               </a>
-            </li>
+            </li> 
             <li class="ms-3">
               <a class="link-body-emphasis" href="#" aria-label="Facebook">
                 <h3><i class="bi bi-facebook"></i></h3>
               </a>
-            </li>
-          </ul>
-        </div>
-      </footer>
-    </section>
+            </li> 
+          </ul> 
+        </div> 
+      </footer> 
+   </section>
+
+    
 
     <!-- Script -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-<script>
-  // Read the "event" parameter in the URL
-  const params = new URLSearchParams(window.location.search);
-  const eventId = params.get("event");
+      crossorigin="anonymous"></script>
+    <script>
+      // Read the "event" parameter in the URL
+      const params = new URLSearchParams(window.location.search);
+      const eventId = params.get("event");
 
-  const sections = {
-    "goat-yoga": document.getElementById("goat-yoga"),
-    "turkey-fest": document.getElementById("turkey-fest"),
-    "jester-market": document.getElementById("jester-market"),
-  };
+      const sections = {
+        "goat-yoga": document.getElementById("goat-yoga"),
+        "turkey-fest": document.getElementById("turkey-fest"),
+        "jester-market": document.getElementById("jester-market"),
+      };
 
-  // Hide all events
-  Object.values(sections).forEach(sec => sec.classList.add("d-none"));
+      // Hide all events
+      Object.values(sections).forEach(sec => sec.classList.add("d-none"));
 
-  // If a valid event is passed, show it
-  if (sections[eventId]) {
-    sections[eventId].classList.remove("d-none");
-  } else {
-    // Default to Goat Yoga
-    sections["goat-yoga"].classList.remove("d-none");
-  }
-</script>
+      // If a valid event is passed, show it
+      if (sections[eventId]) {
+        sections[eventId].classList.remove("d-none");
+      } else {
+        // Default to Goat Yoga
+        sections["goat-yoga"].classList.remove("d-none");
+      }
+    </script>
 
     <script src="script.js"></script>
   </body>
