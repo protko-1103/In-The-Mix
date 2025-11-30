@@ -15,13 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const learnMoreBtn = document.getElementById("learnmore-btn");
-  if (learnMoreBtn) {
-    learnMoreBtn.addEventListener("click", (event) => {
-      event.preventDefault();
-      window.location.href = "sampleeventinfo.html";
-    });
-  }
+
 
   const uploadEventBtn = document.getElementById("uploadevent-btn");
   if (uploadEventBtn) {
