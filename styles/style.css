@@ -254,8 +254,43 @@ iframe {
 /* aside bar */
 .sidebar-box {
     border: 1px solid #c8d1e0;
-    background: black;
+    background: none;
     border-radius: 12px;
+}
+
+.sidebar-box li{
+    padding: 8px 0;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.sidebar-box li.active{
+    font-weight: 600;
+    color: var(--black);
+}
+
+/* cards */
+.event-card {
+    background: #f4f6fb;
+    border-radius: 16px;
+}
+
+.event-img {
+    width: 180px;
+    height: 120px;
+    background-color: #dfe3ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-img::after {
+    opacity: 0.3;
+    font-size: 150px;
+}
+
+.event-img img{
+    object-fit: cover;
 }
 
 
