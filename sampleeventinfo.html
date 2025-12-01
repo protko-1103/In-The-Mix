@@ -359,9 +359,12 @@
                 </div>
 
                 <!-- REMOVE data-bs-toggle here to prevent modal opening unless valid -->
-                <button type="submit" class="btn btn-primary mt-4">
+                <div id="registerModal">
+                  <button type="submit" class="btn btn-primary mt-4" id="registerBtn">
                   Register
-                </button>
+                  </button>
+                </div>
+                
 
               </form>
             </div>
@@ -895,6 +898,33 @@
         // Default to Goat Yoga
         sections["goat-yoga"].classList.remove("d-none");
       }
+
+      // Form validation
+      document.addEventListener("DOMContentLoaded", () => {
+
+        const eventForms = document.querySelectorAll('.needs-validation');
+
+        eventForms.forEach(form => {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Bootstrap validation
+            if (!form.checkValidity()) {
+              form.classList.add("was-validated");
+              return;
+            }
+
+            // If valid → open the modal
+            const eventModal = new bootstrap.Modal(document.getElementById("eventModal"));
+            eventModal.show();
+
+            form.classList.add("was-validated");
+          });
+        });
+
+      });
+
     </script>
 
     <script src="script.js"></script>
