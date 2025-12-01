@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-/*
+
 
 // MODAL script
   const steps = document.querySelectorAll('.modal-step');
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 }
 
-*/
+
 
 // Script for the uploadevent.html page
 // Tags
@@ -194,7 +194,8 @@ if (fileInput) {
 
     if(!file) {
       fileLabel.textContent = "No file chosen...";
-      successIcon.computedStyleMap.display = "none";
+      // successIcon.computedStyleMap.display = "none";
+      successIcon.style.display = "none";
       return;
     }
 
@@ -205,10 +206,7 @@ if (fileInput) {
 }
 
 
-// ===========================
-// BOOTSTRAP VALIDATION SYSTEM
-// ===========================
-
+// Bootstrap Validation
 const form = document.getElementById("eventForm");
 
 form.addEventListener("submit", function (event) {
