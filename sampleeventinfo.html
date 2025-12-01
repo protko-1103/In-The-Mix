@@ -69,15 +69,121 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" id="register-btn" href="register.html">Log In</a>
+              <a class="nav-link disabled" id="register-btn" href="#">Log In</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="signin-btn" href="#">Sign In</a>
+              <a class="nav-link" id="signin-btn" href="#" data-bs-target="#signupModal" data-bs-toggle="modal">Sign In</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <!-- Register (new user): modal itself -->
+    <!-- to link the modal to any button, type this on the element: data-bs-target="#signupModal" data-bs-toggle="modal"-->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-3">
+
+          <!-- STEP 1: Account Type -->
+          <div class="modal-step" id="step1">
+            <h4 class="mb-3 text-center">Choose Account Type</h4>
+            <p class="text-center">Are you an event goer or event organizer?</p>
+
+            <div class="container text center">
+              <div class="row justify-content-start">
+                <div class="col-md-6" style="height: 100px;">
+                  <button class="btn btn-outline-primary w-100 h-100 mb-2 next" data-next="step2" data-account="personal">
+                    Personal Account
+                  </button>
+                </div>
+
+                <div class="col-md-6" style="height: 100px;">
+                  <button class="btn btn-primary w-100 h-100 next" data-next="step2" data-account="organization">
+                    Organization Account
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-center pt-3">
+              Both can view, attend, and review events. </br>
+              <span class="text-uppercase">only</span> organizers can upload events
+            </p>
+          </div>
+
+          <!-- STEP 2: Sign Up Method -->
+          <div class="modal-step d-none" id="step2">
+            <!-- google sign-up -->
+            <h4 class="mb-3 text-center">Sign Up With</h4>
+            <button class="btn w-100 mb-2" id="googleSignUp" disabled>
+              Continue with Google
+            </button>
+            <!-- apple sign-up -->
+            <button class="btn w-100 mb-2" id="appleSignUp" disabled>
+              Continue with Apple
+            </button>
+            <!-- Facebook sign-up -->
+            <button class="btn w-100 mb-2" id="fbSignUp" disabled>
+              Continue with Facebook
+            </button>
+
+
+            <!-- Email sign-up -->
+            <button class="btn btn-outline-primary w-100 next" data-next="step3">
+              Continue with Email
+            </button>
+            <button class="btn btn-link mt-3 back" data-back="step1">← Back</button>
+          </div>
+
+          <!-- STEP 3: Email/Password Form -->
+          <div class="modal-step d-none" id="step3">
+            <h4 class="mb-3 text-center">Finish Signing Up</h4>
+
+            <form id="emailSignupForm">
+              <div class="mb-3">
+                <label class="form-label">Your Name</label>
+                <input type="text" class="form-control" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Business/Organization name</label>
+                <input type="text" class="form-control" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" required>
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">
+                  <i class="bi bi-geo-alt"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Orlando, FL" aria-label="Location" aria-describedby="basic-addon1">
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">
+                Create Account
+              </button>
+            </form>
+
+            <button class="btn btn-link mt-3 back" data-back="step2">← Back</button>
+          </div>
+
+        </div>
+      </div>
+    </div>    
 
     <!-- Multi-page Event cards -->
 
