@@ -41,6 +41,11 @@ nav form .btn:hover{
 }
 
 /* Hero Section */
+/* .hero {
+    background-image: url('images/florida3.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+} */
 .highlight {
     color: var(--secondary-color);
 }
