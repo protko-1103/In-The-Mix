@@ -38,207 +38,221 @@
 
           <!-- Links -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
               <li class="nav-item">
-                <a class="nav-link" id="home-btn" aria-current="page" href="#">Home</a>
+                <a class="nav-link" id="home-btn" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="events-btn" href="#">Events</a>
+                <a class="nav-link" id="msg-btn" href="#">Messages</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="register-btn" href="#">Register</a>
+                <a class="nav-link" id="notif-btn" href="#">Notifications</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id= "signin-btn" data-bs-target="#signupModal" data-bs-toggle="modal">Sign In</a>
+              <li class="nav-item border-start border-secondary border-2">
+                <a class="nav-link fw-bold text-decoration-underline" id="create-btn" href="uploadevent.html">Create an Event</a>
+              </li>
+
+              <!-- user dropdown -->
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="bi bi-person-circle fs-4"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a href="#" class="dropdown-item">Dashboard</a></li>
+                  <li><a href="#" class="dropdown-item">Account Settings</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a href="#" class="dropdown-item">Logout</a></li>
+                </ul>
               </li>
             </ul>
           </div>
         </div>
     </nav>
 
-<!-- form starts here -->
-<form id="eventForm" class="needs-validation" novalidate>
-    <section class="container p-5">
-      <h1>Add Event</h1>
-      
-      <div class="row">
-        <!-- Upload Form -->
-        <div class="col-md-8">
+    <!-- form starts here -->
+    <form id="eventForm" class="needs-validation" novalidate>
+        <section class="container p-5">
+          <h1>Add Event</h1>
+          
+          <div class="row">
+            <!-- Upload Form -->
+            <div class="col-md-8">
 
-          <!-- Event Name -->
-          <div class="mb-3">
-            <label for="eventNameInput" class="form-label">Event Name</label>
-            <input type="text" class="form-control" id="eventNameInput" placeholder="Give your event a name" required>
-            <div class="invalid-feedback">Event name is required.</div>
-          </div>
-
-          <!-- Event Description -->
-          <div class="mb-3">
-            <label for="descriptionTextarea1" class="form-label">Description (required)</label>
-            <textarea class="form-control" id="descriptionTextarea1" rows="3" required></textarea>
-            <div class="invalid-feedback">Description is required.</div>          
-          </div>
-
-          <!-- Tags -->
-          <div class="mb-3 tags-input">
-            <!-- add a hint -->
-            <label for="inputTag" class="form-label">You can add 5 topics</label>
-            <ul id="tags"></ul>
-            <input type="text" class="form-control" id="inputTag" placeholder="Enter topic name">
-          </div>
-
-          <!-- LOCATION -->
-          <label class="form-label">Location</label>
-            <div class="location-box">
-                <div class="location-tabs">
-                    <div class="tab active" data-type="inperson">
-                        <i class="bi bi-geo-alt"></i><br>In person
-                    </div>
-                    <div class="tab" data-type="online">
-                        <i class="bi bi-laptop"></i><br>Online
-                    </div>
-                    <div class="tab" data-type="hybrid">
-                        <i class="bi bi-geo"></i><br>Hybrid
-                    </div>
-                </div>
-
-                <div class="location-divider"></div>
-
-                <div>
-                    <div class="input-group">
-                        <span class="input-group-text"><i class="bi bi-search"></i></span>
-                        <input type="text" class="form-control" placeholder="Search location" required>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Select Date and Time -->
-            
-            <div class="mb-3">
-              <label class="form-label">Select Start Date & Time</label>
-
-              <div class="input-group">
-                <input type="date" class="form-control" id="startDate" required>
-                <div class="invalid-feedback">Start date is required.</div>
-
-                <input type="time" class="form-control" id="startTime" required>
-                <div class="invalid-feedback">Start time is required.</div>
+              <!-- Event Name -->
+              <div class="mb-3">
+                <label for="eventNameInput" class="form-label">Event Name</label>
+                <input type="text" class="form-control" id="eventNameInput" placeholder="Give your event a name" required>
+                <div class="invalid-feedback">Event name is required.</div>
               </div>
-            </div>                   
 
-            <!-- End Time -->
-            <label class="form-label mt-3" for="endTimePicker">End Date & Time</label>
-            <input class="form-control mb-3" type="datetime-local" id="endTimePicker" required>   
-            <div class="invalid-feedback">End date is required.</div>         
+              <!-- Event Description -->
+              <div class="mb-3">
+                <label for="descriptionTextarea1" class="form-label">Description (required)</label>
+                <textarea class="form-control" id="descriptionTextarea1" rows="3" required></textarea>
+                <div class="invalid-feedback">Description is required.</div>          
+              </div>
 
-            <!-- Duration div that appears when the user inputs an end time -->
-            <div id="duration" class="duration-content">
-              <p id="result">Enter dates and times above to see the duration.</p>
-            </div>            
+              <!-- Tags -->
+              <div class="mb-3 tags-input">
+                <!-- add a hint -->
+                <label for="inputTag" class="form-label">You can add 5 topics</label>
+                <ul id="tags"></ul>
+                <input type="text" class="form-control" id="inputTag" placeholder="Enter topic name">
+              </div>
 
-            <!-- EVENT SETTINGS -->
-            <div class="mt-4">
-                <h5>Event Settings</h5>
+              <!-- LOCATION -->
+              <label class="form-label">Location</label>
+                <div class="location-box">
+                    <div class="location-tabs">
+                        <div class="tab active" data-type="inperson">
+                            <i class="bi bi-geo-alt"></i><br>In person
+                        </div>
+                        <div class="tab" data-type="online">
+                            <i class="bi bi-laptop"></i><br>Online
+                        </div>
+                        <div class="tab" data-type="hybrid">
+                            <i class="bi bi-geo"></i><br>Hybrid
+                        </div>
+                    </div>
 
-                <!-- Communication method -->
-                <div class="settings-row">
-                    <span>Communication method</span>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input toggle" data-target="#communicationBox" type="checkbox">
+                    <div class="location-divider"></div>
+
+                    <div>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search location" required>
+                        </div>
                     </div>
                 </div>
 
-                <div id="communicationBox" class="settings-content">
-                    <label class="form-label">How will attendees contact you?</label>
-                    <input type="text" class="form-control" placeholder="Type your email or phone">
-                </div>
-
-
-                <!-- Repeat event -->
-                <div class="settings-row">
-                    <span>Repeat event</span>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input toggle" data-target="#repeatBox" type="checkbox">
-                    </div>
-                </div>
-                <div id="repeatBox" class="settings-content">
-                    <label class="form-label">Repeat every...</label>
-                    <select class="form-select">
-                        <option>Weekly</option>
-                        <option>Monthly</option>
-                        <option>Yearly</option>
-                    </select>
-                </div>
-
-                <!-- Attendee limit -->
-                <div class="settings-row">
-                    <span>Attendee limit</span>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input toggle" data-target="#limitBox" type="checkbox">
-                    </div>
-                </div>
-                <div id="limitBox" class="settings-content">
-                    <label class="form-label">Max attendees</label>
-                    <input type="number" class="form-control" placeholder="Number">
-                </div>
-
-                <!-- Event fee -->
-                <div class="settings-row">
-                    <span>Event fee</span>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input toggle" data-target="#feeBox" type="checkbox">
-                    </div>
-                </div>
-                <div id="feeBox" class="settings-content">
-                    <label class="form-label">Price</label>
-                    <input type="number" class="form-control" placeholder="$">
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- Right Contents -->
-        <div class="col-12 col-md-4 ">
-          <div class="file-wrapper">
-            <div class="upload-btn-wrapper">
-              <button class="btn upload-file font-weight-500">
-                <span class="upload-btn">
-                  <i class="bi bi-cloud-check-fill d-block font-50 pb-2">
-                    Browse folders here
-                  </i>
-                </span>
-                <span class = "upload-select-button" id="blankFile">Supports JPG, JPG2000 and PNG</span>
-                <span class="success">
-                  <i class="bi bi-check-circle text-success"></i>
-                </span>
-              </button>
-              <input type="file" name="selectFile" id="selectFile" required>
-              <div class="invalid-feedback">Please upload an image.</div>
-            </div>
-          </div>
-        </div>
+                <!-- Select Date and Time -->
                 
-      </div>
-     </section>
+                <div class="mb-3">
+                  <label class="form-label">Select Start Date & Time</label>
 
-      <section class="container p-5">
-        <!-- Action Bar -->
-        <div class="d-flex justify-content-between align-items-center border-top pt-4 mt-4">
-          <!-- cancel button -->
-          <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='index.html'">Cancel</button>
+                  <div class="input-group">
+                    <input type="date" class="form-control" id="startDate" required>
+                    <div class="invalid-feedback">Start date is required.</div>
 
-          <!-- Right buttons -->
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-outline-primary">Save as Draft</button>
-            <button type="button" class="btn btn-outline-info">Preview</button>
-            <button type="submit" class="btn btn-outline-primary">Publish</button>
+                    <input type="time" class="form-control" id="startTime" required>
+                    <div class="invalid-feedback">Start time is required.</div>
+                  </div>
+                </div>                   
+
+                <!-- End Time -->
+                <label class="form-label mt-3" for="endTimePicker">End Date & Time</label>
+                <input class="form-control mb-3" type="datetime-local" id="endTimePicker" required>   
+                <div class="invalid-feedback">End date is required.</div>         
+
+                <!-- Duration div that appears when the user inputs an end time -->
+                <div id="duration" class="duration-content">
+                  <p id="result">Enter dates and times above to see the duration.</p>
+                </div>            
+
+                <!-- EVENT SETTINGS -->
+                <div class="mt-4">
+                    <h5>Event Settings</h5>
+
+                    <!-- Communication method -->
+                    <div class="settings-row">
+                        <span>Communication method</span>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input toggle" data-target="#communicationBox" type="checkbox">
+                        </div>
+                    </div>
+
+                    <div id="communicationBox" class="settings-content">
+                        <label class="form-label">How will attendees contact you?</label>
+                        <input type="text" class="form-control" placeholder="Type your email or phone">
+                    </div>
+
+
+                    <!-- Repeat event -->
+                    <div class="settings-row">
+                        <span>Repeat event</span>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input toggle" data-target="#repeatBox" type="checkbox">
+                        </div>
+                    </div>
+                    <div id="repeatBox" class="settings-content">
+                        <label class="form-label">Repeat every...</label>
+                        <select class="form-select">
+                            <option>Weekly</option>
+                            <option>Monthly</option>
+                            <option>Yearly</option>
+                        </select>
+                    </div>
+
+                    <!-- Attendee limit -->
+                    <div class="settings-row">
+                        <span>Attendee limit</span>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input toggle" data-target="#limitBox" type="checkbox">
+                        </div>
+                    </div>
+                    <div id="limitBox" class="settings-content">
+                        <label class="form-label">Max attendees</label>
+                        <input type="number" class="form-control" placeholder="Number">
+                    </div>
+
+                    <!-- Event fee -->
+                    <div class="settings-row">
+                        <span>Event fee</span>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input toggle" data-target="#feeBox" type="checkbox">
+                        </div>
+                    </div>
+                    <div id="feeBox" class="settings-content">
+                        <label class="form-label">Price</label>
+                        <input type="number" class="form-control" placeholder="$">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Right Contents -->
+            <div class="col-12 col-md-4 ">
+              <div class="file-wrapper">
+                <div class="upload-btn-wrapper">
+                  <button class="btn upload-file font-weight-500">
+                    <span class="upload-btn">
+                      <i class="bi bi-cloud-check-fill d-block font-50 pb-2">
+                        Browse folders here
+                      </i>
+                    </span>
+                    <span class = "upload-select-button" id="blankFile">Supports JPG, JPG2000 and PNG</span>
+                    <span class="success">
+                      <i class="bi bi-check-circle text-success"></i>
+                    </span>
+                  </button>
+                  <input type="file" name="selectFile" id="selectFile" required>
+                  <div class="invalid-feedback">Please upload an image.</div>
+                </div>
+              </div>
+            </div>
+                    
           </div>
-      </div>        
-      </section>
-</form>
-<!-- form ends here -->
+        </section>
+
+          <section class="container p-5">
+            <!-- Action Bar -->
+            <div class="d-flex justify-content-between align-items-center border-top pt-4 mt-4">
+              <!-- cancel button -->
+              <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='index.html'">Cancel</button>
+
+              <!-- Right buttons -->
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-outline-primary">Save as Draft</button>
+                <button type="button" class="btn btn-outline-info">Preview</button>
+                <button type="submit" class="btn btn-outline-primary">Publish</button>
+              </div>
+          </div>        
+          </section>
+    </form>
+    <!-- form ends here -->
 
       <section class="footer">
         <footer class="container py-5 text-white"> 
