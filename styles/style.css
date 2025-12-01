@@ -249,6 +249,14 @@ iframe {
     display: block !important;
 }
 
+/* Profile.html */
+
+/* aside bar */
+.sidebar-box {
+    border: 1px solid #c8d1e0;
+    background: black;
+    border-radius: 12px;
+}
 
 
 /* Footer */
