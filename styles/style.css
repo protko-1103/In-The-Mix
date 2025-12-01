@@ -41,11 +41,15 @@ nav form .btn:hover{
 }
 
 /* Hero Section */
-/* .hero {
-    background-image: url('images/florida3.jpg');
+.hero {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('../images/florida3.jpg');
     background-repeat: no-repeat;
-    background-size: auto;
-} */
+    background-size: cover;
+    background-attachment: fixed;
+
+    padding-top: 120px;   /* makes it noticeably larger */
+    padding-bottom: 120px;
+}
 .highlight {
     color: var(--secondary-color);
 }
