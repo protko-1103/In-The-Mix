@@ -255,48 +255,63 @@
 
             <!-- Event Registration -->
             <div class="card mb-3">
-              <form class="card-body">
+              <form class="card-body needs-validation" novalidate>
+
                 <div class="mb-3 row">
                   <div class="col">
-                    <label class="form-label">First name</label>
+                    <label for="validationCustom01" class="form-label">First name</label>
                     <input
                       type="text"
                       class="form-control"
                       placeholder="First name"
-                      aria-label="First name">
+                      id="validationCustom01"
+                      required>
+                    <div class="invalid-feedback">
+                      Please provide a first name.
+                    </div>
                   </div>
+
                   <div class="col">
-                    <label class="form-label">Last name</label>
+                    <label for="validationCustom02" class="form-label">Last name</label>
                     <input
                       type="text"
                       class="form-control"
                       placeholder="Last name"
-                      aria-label="Last name">
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Example@email.com"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">
-                    We'll never share your email with anyone else.
+                      id="validationCustom02"
+                      required>
+                    <div class="invalid-feedback">
+                      Please provide a last name.
+                    </div>
                   </div>
                 </div>
 
-                <div class="mb-3 col-12">
+                <div class="mb-3">
+                  <label for="validationEmail" class="form-label">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="your@email.com"
+                    id="validationEmail"
+                    required>
+                  <div class="invalid-feedback">
+                    Please provide a valid email.
+                  </div>
+                </div>
+
+                <div class="mb-3">
                   <label for="inputAddress" class="form-label">Address</label>
                   <input
                     type="text"
                     class="form-control"
                     id="inputAddress"
-                    placeholder="1234 Main St">
+                    placeholder="1234 Main St"
+                    required>
+                  <div class="invalid-feedback">
+                    Please enter your address.
+                  </div>
                 </div>
 
-                <div class="mb-3 col-12">
+                <div class="mb-3">
                   <label for="inputAddress2" class="form-label">Address 2</label>
                   <input
                     type="text"
@@ -307,33 +322,50 @@
 
                 <div class="row g-3">
                   <div class="col-sm-7">
+                    <label class="form-label">City</label>
                     <input
                       type="text"
                       class="form-control"
                       placeholder="City"
-                      aria-label="City">
+                      required>
+                    <div class="invalid-feedback">
+                      Please provide a valid city.
+                    </div>
                   </div>
+
                   <div class="col-sm">
+                    <label class="form-label">State</label>
                     <input
                       type="text"
                       class="form-control"
                       placeholder="State"
-                      aria-label="State">
+                      required>
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
                   </div>
+
                   <div class="col-sm">
+                    <label class="form-label">Zip</label>
                     <input
                       type="text"
                       class="form-control"
                       placeholder="Zip"
-                      aria-label="Zip">
+                      required>
+                    <div class="invalid-feedback">
+                      Please provide a valid zip code.
+                    </div>
                   </div>
                 </div>
 
+                <!-- REMOVE data-bs-toggle here to prevent modal opening unless valid -->
                 <button type="submit" class="btn btn-primary mt-4">
                   Register
                 </button>
+
               </form>
             </div>
+
           </div>
 
           <!-- Right column -->
@@ -357,13 +389,13 @@
             </div>
 
             <!-- attendee testimonial -->
-            <div class="card mt-4">
+            <div class="card mt-4 testimonials">
               <div class="card-body">
                   <p class="card-text">“In the Mix has made settling into my new city so much easier.
                     I’ve already found events I never would’ve known about, and it’s helped me feel likeI’m actually part of the local scene.”
                   </p>
                   <div class="d-flex align-items-center mt-3">
-                      <img src="https://via.placeholder.com/50" alt="Client 1" class="rounded-circle me-3">
+                      <img src="images/Emadi.jpg" alt="Client 1" class="rounded-circle me-3">
                       <div>
                           <h6 class="mb-0">Emadi K.</h6>
                           <small>Marketing Assistant & New Resident</small>
@@ -760,7 +792,24 @@
 
     </section>
 
-      
+    <!-- Modal for when the user clicks "register" -->
+    <!-- Modal -->
+    <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="eventModalLabel">You are now registered!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Save the date!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     
 
     <!-- Footer -->
